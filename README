@@ -1,0 +1,35 @@
+Para crear las tablas en mysql usar el siguiente codigo
+
+CREATE TABLE materias_final(
+  nombre VARCHAR(50) NOT NULL,
+  correlativas_json TEXT,
+  PRIMARY KEY (nombre)
+);
+CREATE TABLE alumnos (
+  nombre VARCHAR(50) NOT NULL,
+  legajo INT NOT NULL,
+  materias_aprobadas TEXT,
+  PRIMARY KEY (legajo)
+);
+
+
+select *from alumnos;
+select * from materias_final
+
+hay cosas que mejorar por ejemplo el user friendly de la app
+para correr esta pequeña app le damos play a trabajo practico final
+
+en menu principal nos encontraremos
+--opcion 1 para crear una materia esto
+lo que hace es crear la materia y pedir las correlativas que hay que tener
+aprobadas para cursarla por ejemplo:
+geometria3 las dos correlativas que tiene son geometria1 y geometria2
+--opcion 2 Al ingresar alumno nos pedira un numero de legajo
+de 5 digitos el cual ingresaremos y quedara registrado el alumno por ejemplo
+pepe martinez  23231
+tambien nos pedira las materias que tiene aprobada por ejemplo gemetria1 y geometria2
+--opcion3 inscribirse aui viene lo interesante a priori se nos pide que ingresemos el numero
+de legajo del alumno que queremos inscribir luego la materia que tiene que cursar dicho alumno
+en este caso debemos recordar que esta app analizara las correlativas entonces si queremos inscribir
+a nuestro alumno pepe martinez a geometria3 la app nos dira que  esta aprobado para poder cursarla
+en caso de que no fuera asi no se va apoder inscribir a dicha materia.
